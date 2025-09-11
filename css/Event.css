@@ -87,8 +87,12 @@ th{
   .events{
     width: 100vw;
   }
+  .Upcoming{
+    font-size: 0.8em;
+  }
     
 }
+
 @media(max-width:700px){
   th{
     font-size: 0.55em;

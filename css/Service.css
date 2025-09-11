@@ -115,7 +115,7 @@ select{
       background-color: rgba(0, 255, 64, 0.3);
     color: rgba(0, 150, 18, 0.869);
 }
-@media(max-width:700px){
+@media(max-width:1000px){
     .box{
         width: 60vw;
     }
