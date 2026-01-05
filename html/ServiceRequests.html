@@ -9,11 +9,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <title>Service Requests</title>
-    <style>
-       
-    </style>
+   
 </head>
 <body>
+    <div class="overlay" id="overlay"></div>
+    <div class="app-layout">
       <ul class="nav-bar">
         <li class="logo"><img src="../Images/Untitled-4.png" class="logo"></li>
         <li class="nav">  <img src="../Images/dashboard.svg" ><a href="Resident_Homepage.html" >Dashboard</a></li>
@@ -25,56 +25,111 @@
            <li class="nav leave"> <img src="../Images/door-leave.svg"> <a href="Register_Homepage.html">Leave</a></li>
     </ul>
     <img src="../Images/profile-user-account.svg" width="30px" height="30px" class="profile"> 
-    <main class="main">
-        <div class="box send">
-            <h1>Service Request</h1>
-            <p>Submit a Service Request And We Will Get Back To You</p>
-            <form>
+   
+    <main class="requests">
+        <h1>Service Requests</h1>
+        <h2 class="desc">Sumbit Your Service Requests</h2>
+         <section class="UpperWrapper">
+            <button class="request-button" id="openbtn">New Request</button>
+         </section>
+        
+        <section class="stats-grid">
+
+        
+            <div class="stat-card Pending">
+                <span class="stat pend">Pending</span>
+                <span class="count">5</span>
                 
-                    
-                        <h2 class="Title">Title</h2>
-                        <input type="text" id="Subject" placeholder="Subject"> 
-                    
-                    
-                    <h2 class="Title">Request Type</h2>
-                    <select>
-                        <option>Plumbing</option>
-                        <option>Electrical</option>
-                        <option>Elevator</option>
-                        <option>Structural</option>
-                        <option>Cleaning</option>
-                    </select> 
-                    
+            </div>
+            <div class="stat-card Progress">
+                <span class="stat prog">In Progress</span>
+                <span class="count">2</span>
                 
-                <h2 class="Title">Description</h2>
-                <textarea id="desc"> </textarea>
-                <div class="btnwrap">
-                    <input class="btn" type="reset"> 
-                    <button class="btn">Submit</button>
-                    
+            </div>
+            <div class="stat-card Completed">
+                <span class="stat comp">Completed</span>
+                <span class="count">1</span>
+
+            </div>
+        </section >
+         <section class="previous">
+            <div class="request">
+                <div class="imgwraper prog">
+                    <img src="../Images/InProgress.png" class="requestimg">
                 </div>
+           
+                <div class="requestwraper">
+                    <span class="RequestTitle">Kitchen faucet leaking</span>
+                    <span class="Description">The kitchen faucet has been dripping constantly</span>
+                  
+                </div>
+                <div class="typewraper">
+                    <span>Plumbing</span>
+                    <span>Submitted at 17.8.2008</span>
+                </div>
+            </div>
+            <div class="request">
+                 <div class="imgwraper prog">
+                    <img src="../Images/InProgress.png" class="requestimg">
+                </div>
+           
+                <div class="requestwraper">
+                    <span class="RequestTitle">Kitchen faucet leaking</span>
+                    <span class="Description">The kitchen faucet has been dripping constantly</span>
+                  
+                </div>
+                <div class="typewraper">
+                    <span>Plumbing</span>
+                    <span>Submitted at 17.8.2008</span>
+                </div>
+            </div>
+            <div class="request">
+                 <div class="imgwraper comp">
+                    <img src="../Images/Completed.webp" class="requestimg">
+                </div>
+           
+                <div class="requestwraper">
+                    <span class="RequestTitle">Kitchen faucet leaking</span>
+                    <span class="Description">The kitchen faucet has been dripping constantly</span>
+                  
+                </div>
+                <div class="typewraper">
+                    <span>Plumbing</span>
+                    <span>Submitted at 17.8.2008</span>
+                </div>
+            </div>
+         </section>
+        <div class="PopOut" id="popout">
+            <h2>Submit A request</h2>
+            <form class="request-submit">
+               
+                <input type="text" class="input title" placeholder="Request Title"> 
+                <textarea  class="input description" placeholder="Request Description"></textarea>
+                <Select class="input select">
+                    <option value="test"> Test</option>
+                </Select>
+                <button class="sumbitbtn">Submit</button>
             </form>
             
-            
-        </div>
-        <div class="box">
-             <h1 class="header">Previous Requests</h1>
-
-             <ul class="History">
-                <li>
-                     <span class="Date">September 15, 2025</span> <br> <span class="Subject">Electrical Problem</span> <br> <span class="Status Pro">In Progress</span>
-                     
-                </li>
-                <li>
-                      <span class="Date">September 11, 2025</span> <br> <span class="Subject">Plumbing Problem</span> <br> <span class="Status Com">Completed</span>
-                </li>
-                <li>
-                      <span class="Date">September 2, 2025</span> <br> <span class="Subject">Elevator Stuck</span> <br> <span class="Status Com">Completed</span>
-                </li>
- 
-             </ul>
-        </div>
+        </div>     
     </main>
-    
+
+    </div>
 </body>
+ <script>
+        const popout = document.getElementById('popout');
+        const overlay = document.getElementById('overlay');
+        const openbtn = document.getElementById('openbtn');
+        openbtn.addEventListener('click',function() 
+        {
+            popout.style.display = 'block';
+            overlay.style.display = 'block';
+        }
+
+        );
+        overlay.addEventListener('click', function()  {
+            overlay.style.display = 'none';
+            popout.style.display = 'none';
+        });
+    </script>
 </html>
