@@ -35,7 +35,7 @@ body{
   padding-left: 2rem;
   grid-row-start: 2;
   background: linear-gradient(to bottom right, #14b8a6, #10b981, #16a34a);
-
+ align-items: flex-start;
 
 }
 .Money{
@@ -191,4 +191,15 @@ header{
 }
 .moneywraper{
     padding-right: 1em;
+}
+.PayBtn{
+    margin-left: auto;
+     padding: 0.65rem 1.25rem;
+  border-radius: 16px;
+  background: linear-gradient(135deg, #f4f4f5, #bdbdbd);
+  font-size: 0.95rem;
+  font-weight: bolder;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 6px 18px rgba(59, 130, 246, 0.35);
 }
