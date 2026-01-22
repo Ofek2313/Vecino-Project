@@ -1,161 +1,194 @@
+@keyframes fadeIn {
+    from{
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+body{
+    overflow: hidden;
+}
 
 .main{
     display: grid;
-    grid-template-columns: 2fr 1fr;
- 
+     grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+    grid-template-rows: 50px repeat(4,1fr);
     gap: 20px;
-    height: 100vh;
-
-}
-.box1{
-  
-    background-color: white;
-    border-radius: 20px;
-   
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    grid-column: 1/2;
     
-  
-}
-.long {
 
-  grid-column: 2/3;  
-  height: auto;
 }
-*{
-    font-family: Roboto;
-     color: #1f2937;
-}
-h1{
-    font-family: Roboto;
-    color: #1f2937;
-    padding-left: 10%;
-    padding-top:2%;
-    background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-.Fee{
-    font-size: 3.5em;
-    margin-left: 5%;
-    margin-top: 5%;
+
+.payments{
+  grid-column-start: 1;
+  grid-column-end: 3;
+  background: #fff;
+  border-radius: 16px;
+  padding: 1rem;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+ 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 2rem;
+  grid-row-start: 2;
+  background: linear-gradient(to bottom right, #14b8a6, #10b981, #16a34a);
+
+
 }
 .Money{
-    font-size: 4em;
-    text-align: center;
-    transition: font-size 0.3s ease;
+    font-size: 3.5em;
     font-weight: bold;
-    padding-top: 5%;
-    background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    
-}
-.Money:hover{
-    font-size:4vw;
-}
-.NumberFee{
-    font-size: 1.5rem;
-    text-align: center;
-    color: #718096;
-    font-weight: lighter;
-}
-.Icon{
-    width: 200px;
-    height: 200px;
-    margin-left: 60%;
-    margin-top:-50%;
-}
-.History{
-    list-style-type: none;
-    margin-left: 15%;
-    margin-top: 15%;
-    height: 100%;
-}
-.Fees{
-    font-weight: lighter;
-    text-align: center;
-    font-size: 1.5rem;
-    margin-bottom: 1%;
-    color: #718096
-}
-.selectbox{
-   
-    width: 80%;
-    height: 40px;
-    border-radius: 8px;
-    border: 3px solid rgb(208, 208, 208);
-    font-size: 1.3rem;
-    
-}
-.wrapselect{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin-top: 15vh;
-    height: 25%;
-    gap: 10px;
-
-}
-.wrapselect h2{
-    
-    
-    font-size:1.5em;
-}
-.btn{
-    width: 100%;
-    height: 65%;
-    border-radius: 10px;
-    font-size: 1.2em;
-    border: 1px solid rgb(208, 208, 208);
-    text-align: center;
-    padding-bottom: 4%;
-    font-weight: bold;
-    background:linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
     color: white;
 }
-.btn-wrap{
-    margin: 0;
+.Fees{
+    padding-left: 0.5em;
+    color: white;
+    font-weight: 300;
+}
+.NumberFee{
+    padding-left: 0.5em;
+    color: white;
+    font-weight: 300;
+}
+.history{
+  background: #fff;
+  border-radius: 16px;
+  padding: 1rem;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+  
+  display: flex;
+  flex-direction: column;
+  grid-row-start: 2;
+  grid-row-end: 5;
+  gap: 1rem
+}
+.fees{
+    grid-row-start: 3;
+    grid-row-end: 5;
+    grid-column-start: 1;
+    grid-column-end: 3;
     display: flex;
-    gap: 5px;
-    width: 80%;
-}
-.Date{
-    font-weight: lighter;
-
-}
-.Amount{
-    font-size: 1.2rem;
-    font-weight: 500;
-}
-.Status{
-    background-color: black;
-    border-radius: 20px;
-    padding: 2px;
-}
-.History li{
-    margin-top: 15%;
-}
-.Pen{
-    background-color: rgba(253, 253, 4, 0.3);
-    color: rgba(157, 160, 0, 0.869);
-}
-.Com{
-     background-color: rgba(0, 255, 64, 0.3);
-    color: rgba(0, 150, 18, 0.869);
-}
-.Can{
-    background-color: rgba(255, 7, 7, 0.3);
-    color: rgba(234, 0, 0, 0.869);
-}
-.long h1{
-    font-size: 2rem;
+    flex-direction: column;
+    gap: 1rem;
     
 }
-@media(max-width:1000px){
-    .History{
-        margin-bottom: 5%;
-        font-size: 1.5em;
-    }
+.fee{
+  background: #fff;
+  
+  border-radius: 16px;
+  padding: 1rem;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+  min-height: 90px;
+  animation: fadeIn 0.6s ease-in;
+  display: flex;
+
+}
+.fee:nth-child(1){animation-delay: 0.1s;}
+.fee:nth-child(2){animation-delay: 0.2s;}
+.fee:nth-child(3){animation-delay: 0.3s;}
+.paid{
+  background: #fff;
+  border-radius: 16px;
+  padding: 1rem;
+  background-color: rgba(121, 255, 130, 0.12);
+  
+  min-height: 40px;
+  display: flex;
+  
+}
+.Title{
+    font-size: 1rem;
+    font-weight: bold;
+}
+.Secondary{
+    font-size: 0.9rem;
+    font-weight: 400;
+}
+.imgwraper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+   
+    width: 44px;
+  height: 44px;
+ 
+}
+
+.requestimg{
+     border-radius: 10px;
+     padding: 0.5em;
+     width: 20px;
+  height: 20px;
+  object-fit: contain;  
+
+background: linear-gradient(135deg, #72ff47, #06b838);
+}
+.info{
+    padding-left: 0.3em;
+    padding-top: 0.3em;
+}
+.feeamount{
+  margin-left: auto;
+  padding-top: 0.9em;
+  font-weight: bold;
+}
+header{
+    grid-row-start: 1;
+    font-size: 2rem;
+    font-weight: bold;
+    background: linear-gradient(135deg, #46e017, #02a530);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.FeeTitle{
+    font-size: 1.5em;
+    font-weight: 500;
+}
+.feedesc{
+    font-weight: 300;
+    font-size: 0.9em;
+}
+.feeinfo{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    float: 1;
+}
+.fee-bottom{
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    
+}
+.status {
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.25em 0.6em;
+  border-radius: 999px;
+
+  background-color: rgba(239, 68, 68, 0.15);
+  color: rgba(185, 28, 28, 0.9);
+}
+.amount {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #111827;
+  margin-left: auto;
+  padding-top: 1.5em;
+}
+.moneyimg{
+      border-radius: 10px;
+     padding: 0.5em;
+     width: 20px;
+  height: 20px;
+  object-fit: contain;  
+  background: linear-gradient(135deg, #72ff47, #06b838);
+  
+}
+.moneywraper{
+    padding-right: 1em;
 }

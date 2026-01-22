@@ -11,6 +11,16 @@
     gap: 1.5rem;
     padding-top: 2rem;
 }
+@keyframes myAnimation {
+    from{
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 .stat-card {
   background: #fff;
   border-radius: 16px;
@@ -18,7 +28,7 @@
   display: grid;
   box-shadow: 0 10px 30px rgba(0,0,0,0.06);
   min-height: 90px;
-
+  animation: myAnimation 0.6s ease-out;
 }
 .requests{
     padding: 3rem;
@@ -29,6 +39,7 @@
     padding-top: 1rem;
    
 }
+
 .request{
   background: #fff;
   border-radius: 16px;
@@ -40,8 +51,12 @@
   min-height: 100px;
   margin-top: 2rem;
  align-items: start;
- 
+ opacity: 0;
+ animation: myAnimation 0.6s ease-out forwards;
 }
+.request:nth-child(1){animation-delay: 0.1s;}
+.request:nth-child(2){animation-delay: 0.2s;}
+.request:nth-child(3){animation-delay: 0.3s;}
 .requestwraper{
     display: flex;
     flex-direction: column;
@@ -114,6 +129,16 @@ display: inline-flex;
    justify-content: end;
    padding-right: 1rem;
 }
+@keyframes popOut {
+    from{
+        opacity: 0;
+        transform: scale(0.2);
+    }
+    to{
+        opacity: 1;
+        transform: scale(1);
+    }
+}
 .request-button{
  
   gap: 0.5rem;
@@ -132,6 +157,7 @@ display: inline-flex;
 
   box-shadow: 0 6px 18px rgba(59, 130, 246, 0.35);
     transition: transform 0.3s ease;
+    animation: popOut 0.6s ease-out;
 }
 .request-button:hover
 {

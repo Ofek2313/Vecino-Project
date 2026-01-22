@@ -23,45 +23,103 @@
         <li class="nav"> <img src="../Images/money.svg" ><a href="Payments.html">Payments</a></li>
         <li class="nav"> <img src="../Images/spanner-wrench.svg" ><a href="ServiceRequests.html">Service Requests</a></li>
         <li class="nav"> <img src="../Images/survey.svg" ><a href="Polls.html">Digital Polls</a></li>
-           <li class="nav leave"> <img src="../Images/door-leave.svg"> <a href="Register_Homepage.html">Leave</a></li>
+        
+        <li class="nav leave"> <img src="../Images/door-leave.svg"> <a href="Register_Homepage.html">Leave</a></li>
     </ul>
-    <img src="../Images/profile-user-account.svg" width="30px" height="30px" class="profile"> 
+      <div class="profile-container">
+    <button class="profile-btn" id="profileBtn">
+        <img src="~/Images/person.png" class="profile">
+    </button>
+    <div class="dropdown-menu" id="dropdownMenu">
+        <ul>
+            <li onclick="window.location.href='profile.html'">👤 My Profile</li>
+            <li onclick="window.location.href='settings.html'">⚙️ Settings</li>
 
-    <div class="main">
-        <div class="box1">
-            <h1 > <img src="../Images/big-megaphone.svg">Public Announcements</h1>
-            <ul class="Anc">
-                <li class="Update">Maintance Notice For Elevator 
-                     <p>Schudeled Maintance For Elevator, Will take Place bettwen 9:00PM and 11:30PM,
-                         Please Avoid Use Of Elevator.</p>
-                    <span class="Time">2 Hours ago</span>
-                </li>
-                <li class="Update">Maintance Notice For Swege
-                    <p>Schudeled Maintance For Swege, Will take Place bettwen 12:00PM and 1:00AM,
-                        Please Stay Cautious.</p>
-                      <span class="Time">4 Hours ago</span>
-                </li>
-                  
-            </ul>
-        </div>
-        <div class="box1">
-            <h1> <img src="../Images/free-bell-icon-860-thumb.png"> Notifications</h1>
-            <ul class="Anc">
-               
-                <li class="Update"> 
-                    Payment Notice For September, 1 2025 
-                    <p>Reminder To Pay the monthly Fees, Untill September 1, 2025. Dont Forget to avoid late fees and discomfort.</p>
-                     <span class="Time">3 Hours ago</span>
-                </li>
-                <li class="Update">
-                    Technician Coming at 5/9
-                     <p>A Technician has been Schudeled to arrive at your apartment at 9:00PM, Please don't forget and be Prepard.</p>
-                     <span class="Time">5 Hours ago</span>
-                </li>
-                  
-            </ul>
-        </div>
+            <li class="divider"></li>
+
+            <li onclick="logout()">🚪 Logout</li>
+        </ul>
     </div>
+</div>
+        <div class="main1">
+            
+              <header class="header">Announcements and Notifications</header>
+            <section class="Announcements">
+                <div class="announcement">
+                    <img src="../Images/big-megaphone.svg" class="megaphone">
+                    <div class="info">
+
+                   
+                    <h1 class="AnncTitle">Title</h1>
+                    <p class="AnncDesc">Water Will Be Turned off this morning because of road work happening nearby</p>
+                    <div class="bottom">
+                        <img src="../Images/calendar-xoaigr9z259n0zw0pl1c.webp" class="cal">
+                        <p class="AnncDate">19/12/2025</p>
+                    </div>
+                    
+                     </div>
+                </div>
+                <div class="announcement">
+                    <img src="../Images/big-megaphone.svg" class="megaphone">
+                    <div class="info">
+
+                   
+                    <h1 class="AnncTitle">Title</h1>
+                    <p class="AnncDesc">Water Will Be Turned off this morning because of road work happening nearby</p>
+                    <div class="bottom">
+                        <img src="../Images/calendar-xoaigr9z259n0zw0pl1c.webp" class="cal">
+                        <p class="AnncDate">19/12/2025</p>
+                    </div>
+                    
+                     </div>
+                </div>
+                <div class="announcement">
+                    <img src="../Images/big-megaphone.svg" class="megaphone">
+                    <div class="info">
+
+                   
+                    <h1 class="AnncTitle">Title</h1>
+                    <p class="AnncDesc">Water Will Be Turned off this morning because of road work happening nearby</p>
+                    <div class="bottom">
+                        <img src="../Images/calendar-xoaigr9z259n0zw0pl1c.webp" class="cal">
+                        <p class="AnncDate">19/12/2025</p>
+                    </div>
+                    
+                     </div>
+                </div>
+                <div class="announcement">
+                    <img src="../Images/big-megaphone.svg" class="megaphone">
+                    <div class="info">
+
+                   
+                    <h1 class="AnncTitle">Title</h1>
+                    <p class="AnncDesc">Water Will Be Turned off this morning because of road work happening nearby</p>
+                    <div class="bottom">
+                        <img src="../Images/calendar-xoaigr9z259n0zw0pl1c.webp" class="cal">
+                        <p class="AnncDate">19/12/2025</p>
+                    </div>
+                    
+                     </div>
+                </div>
+                <div class="announcement">
+                    <img src="../Images/big-megaphone.svg" class="megaphone">
+                    <div class="info">
+
+                   
+                    <h1 class="AnncTitle">Title</h1>
+                    <p class="AnncDesc">Water Will Be Turned off this morning because of road work happening nearby</p>
+                    <div class="bottom">
+                        <img src="../Images/calendar-xoaigr9z259n0zw0pl1c.webp" class="cal">
+                        <p class="AnncDate">19/12/2025</p>
+                    </div>
+                    
+                     </div>
+                </div>
+                
+            </section>
+        
+        </div>
+
     </div>
 </body>
 </html>

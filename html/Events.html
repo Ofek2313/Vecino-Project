@@ -26,10 +26,24 @@
         <li class="nav"> <img src="../Images/survey.svg" ><a href="Polls.html">Digital Polls</a></li>
            <li class="nav leave"> <img src="../Images/door-leave.svg"> <a href="Register_Homepage.html">Leave</a></li>
     </ul>
-    <img src="../Images/profile-user-account.svg" width="30px" height="30px" class="profile"> 
+    <div class="profile-container">
+    <button class="profile-btn" id="profileBtn">
+        <img src="~/Images/person.png" class="profile">
+    </button>
+    <div class="dropdown-menu" id="dropdownMenu">
+        <ul>
+            <li onclick="window.location.href='profile.html'">👤 My Profile</li>
+            <li onclick="window.location.href='settings.html'">⚙️ Settings</li>
 
+            <li class="divider"></li>
+
+            <li onclick="logout()">🚪 Logout</li>
+        </ul>
+    </div>
+</div>
 
     <main class="main">
+       
         <h1>Community Events</h1>
         <h2>Upcoming Events</h2>
         <div class="event-grid">
